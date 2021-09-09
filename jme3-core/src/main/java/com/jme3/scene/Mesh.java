@@ -1029,7 +1029,7 @@ public class Mesh implements Savable, Cloneable, JmeCloneable {
             return 0;
         }
 
-        if (collisionTree == null) {
+        if (collisionTree == null || collisionTree.isInvalid()) {
             createCollisionData();
         }
 
