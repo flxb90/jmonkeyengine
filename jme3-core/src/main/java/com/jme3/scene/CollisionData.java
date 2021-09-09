@@ -48,4 +48,6 @@ public interface CollisionData extends Savable, Cloneable {
                            Matrix4f worldMatrix,
                            BoundingVolume worldBound,
                            CollisionResults results);
+
+	boolean isInvalid();
 }

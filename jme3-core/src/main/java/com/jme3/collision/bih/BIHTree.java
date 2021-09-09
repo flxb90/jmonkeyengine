@@ -490,4 +490,14 @@ public class BIHTree implements CollisionData {
         pointData = ic.readFloatArray("points", null);
         triIndices = ic.readIntArray("indices", null);
     }
+
+    @Override
+    public boolean isInvalid() {
+        for (float pointDatum : pointData) {
+            if (Float.isNaN(pointDatum)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
